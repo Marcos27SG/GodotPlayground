@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://b73r0qhs2j0a2"]
+
+[ext_resource type="PackedScene" uid="uid://cgbyhcsnl305b" path="res://scenes/enemy.tscn" id="1_pmisy"]
+[ext_resource type="Script" path="res://scenes/battle.gd" id="1_rcquv"]
+[ext_resource type="Script" path="res://scenes/enemy_handler.gd" id="2_ejxft"]
+
+[node name="Battle" type="Node3D"]
+script = ExtResource("1_rcquv")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.983653, 0.180073, 0, -0.180073, 0.983653, 0, 2.01592, 5.1094)
+
+[node name="EnemyHandler" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34989, 0, 0)
+script = ExtResource("2_ejxft")
+
+[node name="Enemy" parent="EnemyHandler" instance=ExtResource("1_pmisy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.52449, 0, -2.02076)
+
+[node name="Enemy" parent="." instance=ExtResource("1_pmisy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.13097, 0, 0)

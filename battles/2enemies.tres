@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="CallEnemies" load_steps=3 format=3 uid="uid://hf1fsond1etv"]
+
+[ext_resource type="Script" path="res://battles/multipleEnemies.gd" id="1_2klfv"]
+[ext_resource type="PackedScene" uid="uid://c56rggcb4fxp3" path="res://battles/2enemies.tscn" id="1_do8b8"]
+
+[resource]
+script = ExtResource("1_2klfv")
+enemies = ExtResource("1_do8b8")
